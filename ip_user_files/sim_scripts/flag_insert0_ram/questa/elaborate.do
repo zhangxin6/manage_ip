@@ -1,0 +1,1 @@
+vopt -64 +acc -l elaborate.log -L xil_defaultlib -L xpm -L blk_mem_gen_v8_4_1 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.flag_insert0_ram xil_defaultlib.glbl -o flag_insert0_ram_opt

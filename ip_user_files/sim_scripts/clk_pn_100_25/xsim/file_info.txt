@@ -1,0 +1,3 @@
+clk_pn_100_25_clk_wiz.v,verilog,xil_defaultlib,../../../../clk_pn_100_25/clk_pn_100_25_clk_wiz.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+clk_pn_100_25.v,verilog,xil_defaultlib,../../../../clk_pn_100_25/clk_pn_100_25.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+glbl.v,Verilog,xil_defaultlib,glbl.v

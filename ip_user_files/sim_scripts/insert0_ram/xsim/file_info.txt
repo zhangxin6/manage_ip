@@ -1,0 +1,2 @@
+insert0_ram.v,verilog,xil_defaultlib,../../../../insert0_ram/sim/insert0_ram.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

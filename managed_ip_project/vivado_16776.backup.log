@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Nov 21 10:27:15 2018
+# Process ID: 16776
+# Current directory: C:/Users/zhang/Desktop/manage_ip/managed_ip_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4504 C:\Users\zhang\Desktop\manage_ip\managed_ip_project\managed_ip_project.xpr
+# Log file: C:/Users/zhang/Desktop/manage_ip/managed_ip_project/vivado.log
+# Journal file: C:/Users/zhang/Desktop/manage_ip/managed_ip_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/zhang/Desktop/manage_ip/managed_ip_project/managed_ip_project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 894.621 ; gain = 159.371
+Iexit
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 21 10:30:24 2018...
+-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.Write_Depth_A {8192}] [get_ips flag_insert0_ram]
+generate_target all [get_files  C:/Users/zhang/Desktop/manage_ip/flag_insert0_ram/flag_insert0_ram.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'flag_insert0_ram'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'flag_insert0_ram'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'flag_insert0_ram'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'flag_insert0_ram'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'flag_insert0_ram'...
+catch { config_ip_cache -export [get_ips -all flag_insert0_ram] }
+export_ip_user_files -of_objects [get_files C:/Users/zhang/Desktop/manage_ip/flag_insert0_ram/flag_insert0_ram.xci] -no_script -sync -force -quiet
+reset_run flag_insert0_ram_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/zhang/Desktop/manage_ip/managed_ip_project/managed_ip_project.runs/flag_insert0_ram_synth_1
+
+launch_runs -jobs 6 flag_insert0_ram_synth_1
+[Wed Nov 21 10:28:17 2018] Launched flag_insert0_ram_synth_1...
+Run output will be captured here: C:/Users/zhang/Desktop/manage_ip/managed_ip_project/managed_ip_project.runs/flag_insert0_ram_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/zhang/Desktop/manage_ip/flag_insert0_ram/flag_insert0_ram.xci] -directory C:/Users/zhang/Desktop/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/Desktop/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/Desktop/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/Desktop/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/Desktop/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/Desktop/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/Desktop/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 21 10:30:22 2018...
