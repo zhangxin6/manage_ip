@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Wed Nov 21 11:37:08 2018
+-- Date        : Wed Nov 21 11:37:05 2018
 -- Host        : DESKTOP-9QJ75LG running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/Users/zhang/Desktop/manage_ip/ila_8_16384_1120/ila_8_16384_1120_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top ila_8_16384_1120 -prefix
+--               ila_8_16384_1120_ ila_8_16384_1120_stub.vhdl
 -- Design      : ila_8_16384_1120
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7vx690tffg1930-2

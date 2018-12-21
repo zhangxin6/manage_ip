@@ -1,0 +1,102 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Nov 28 12:33:30 2018
+# Process ID: 9260
+# Current directory: C:/Users/zhang/manage_ip
+# Command line: vivado.exe -mode tcl
+# Log file: C:/Users/zhang/manage_ip/vivado.log
+# Journal file: C:/Users/zhang/manage_ip\vivado.jou
+#-----------------------------------------------------------
+Vivado% #A Vivado script that demonstrates a very simple RTL-to-bitstream batch flow 
+Vivado% # 
+Vivado% #NOTE: typical usage would be "vivado -mode tcl -source ./Desktop/simple1.tcl"
+Vivado% # 
+Vivado% #STEP #0: define output directory area.
+Vivado% Vivado% set verilogdir C:/Users/zhang/iverilog_testbench
+C:/Users/zhang/iverilog_testbench
+Vivado% set sourcedir C:/Users/zhang/fpga_hdlc/src
+C:/Users/zhang/fpga_hdlc/src
+Vivado% set outputdir C:/Users/zhang/fpga_hdlc/output
+C:/Users/zhang/fpga_hdlc/output
+Vivado% set ipdir C:/Users/zhang/manage_ip 
+C:/Users/zhang/manage_ip
+Vivado% file mkdir $outputdir
+Vivado% Vivado% #STEP# 1: setup design sources and constraints 
+Vivado% Vivado% read_verilog [glob $verilogdir/insert0.v]
+C:/Users/zhang/iverilog_testbench/insert0.v
+Vivado% read_verilog [glob $verilogdir/hdlctra.v]
+C:/Users/zhang/iverilog_testbench/hdlctra.v
+Vivado% read_verilog [glob $verilogdir/hdlcrev.v]
+C:/Users/zhang/iverilog_testbench/hdlcrev.v
+Vivado% read_verilog [glob $verilogdir/insert0.v]
+WARNING: [filemgmt 56-12] File 'C:/Users/zhang/iverilog_testbench/insert0.v' cannot be added to the project because it already exists in the project, skipping this file
+Vivado% read_verilog [glob $verilogdir/flag_i0.v]
+C:/Users/zhang/iverilog_testbench/flag_i0.v
+Vivado% read_verilog [glob $verilogdir/dsp_hdlc_ctrl.v]
+C:/Users/zhang/iverilog_testbench/dsp_hdlc_ctrl.v
+Vivado% read_verilog [glob $verilogdir/cpld_top.v]
+C:/Users/zhang/iverilog_testbench/cpld_top.v
+Vivado% read_verilog [glob $verilogdir/emif_intf.v]
+C:/Users/zhang/iverilog_testbench/emif_intf.v
+Vivado% read_verilog [glob $verilogdir/gpio_intf.v]
+C:/Users/zhang/iverilog_testbench/gpio_intf.v
+Vivado% read_verilog [glob $verilogdir/gpio_intr_gen.v]
+C:/Users/zhang/iverilog_testbench/gpio_intr_gen.v
+Vivado% Vivado% read_verilog [glob $sourcedir/top.v]
+C:/Users/zhang/fpga_hdlc/src/top.v
+Vivado% Vivado% read_xdc $sourcedir/top.xdc 
+C:/Users/zhang/fpga_hdlc/src/top.xdc
+Vivado% read_ip  $ipdir/clk_pn_100_25/clk_pn_100_25.xci
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci
+Vivado% read_ip  $ipdir/ila_8_16384_1120/ila_8_16384_1120.xci
+C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci
+Vivado% read_ip  $ipdir/flag_insert0_ram/flag_insert0_ram.xci
+C:/Users/zhang/manage_ip/flag_insert0_ram/flag_insert0_ram.xci
+Vivado% read_ip  $ipdir/hdlc_tx_ram/hdlc_tx_ram.xci
+C:/Users/zhang/manage_ip/hdlc_tx_ram/hdlc_tx_ram.xci
+Vivado% read_ip  $ipdir/insert0_ram/insert0_ram.xci
+C:/Users/zhang/manage_ip/insert0_ram/insert0_ram.xci
+Vivado% read_ip  $ipdir/hdlc_rx_ram/hdlc_rx_ram.xci
+C:/Users/zhang/manage_ip/hdlc_rx_ram/hdlc_rx_ram.xci
+Vivado% Vivado% #STEP# 2: run synthesis, report utilization and timing estimates, write checkpoint  design 
+Vivado% Vivado% set_param general.maxThreads 8
+8
+Vivado% Vivado% synth_design -top top -part xc7vx690tffg1930-2 -flatten rebuilt 
+Command: synth_design -top top -part xc7vx690tffg1930-2 -flatten rebuilt
+Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci
+C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci
+C:/Users/zhang/manage_ip/flag_insert0_ram/flag_insert0_ram.xci
+C:/Users/zhang/manage_ip/hdlc_tx_ram/hdlc_tx_ram.xci
+C:/Users/zhang/manage_ip/insert0_ram/insert0_ram.xci
+C:/Users/zhang/manage_ip/hdlc_rx_ram/hdlc_rx_ram.xci
+
+WARNING: [Vivado_Tcl 4-393] The 'Implementation' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci
+C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci
+
+WARNING: [IP_Flow 19-2162] IP 'clk_pn_100_25' is locked:
+* Current project part 'xc7vx485tffg1157-1' and the part 'xc7vx690tffg1930-2' used to customize the IP 'clk_pn_100_25' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'ila_8_16384_1120' is locked:
+* Current project part 'xc7vx485tffg1157-1' and the part 'xc7vx690tffg1930-2' used to customize the IP 'ila_8_16384_1120' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'flag_insert0_ram' is locked:
+* Current project part 'xc7vx485tffg1157-1' and the part 'xc7vx690tffg1930-2' used to customize the IP 'flag_insert0_ram' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'hdlc_tx_ram' is locked:
+* Current project part 'xc7vx485tffg1157-1' and the part 'xc7vx690tffg1930-2' used to customize the IP 'hdlc_tx_ram' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'insert0_ram' is locked:
+* Current project part 'xc7vx485tffg1157-1' and the part 'xc7vx690tffg1930-2' used to customize the IP 'insert0_ram' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'hdlc_rx_ram' is locked:
+* Current project part 'xc7vx485tffg1157-1' and the part 'xc7vx690tffg1930-2' used to customize the IP 'hdlc_rx_ram' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'

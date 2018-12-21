@@ -60,7 +60,6 @@ COMPONENT flag_insert0_ram
     addra : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
     dina : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     clkb : IN STD_LOGIC;
-    rstb : IN STD_LOGIC;
     enb : IN STD_LOGIC;
     addrb : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
     doutb : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
@@ -80,7 +79,6 @@ your_instance_name : flag_insert0_ram
     addra => addra,
     dina => dina,
     clkb => clkb,
-    rstb => rstb,
     enb => enb,
     addrb => addrb,
     doutb => doutb

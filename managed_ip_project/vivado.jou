@@ -2,19 +2,54 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Nov 21 11:33:54 2018
-# Process ID: 5676
-# Current directory: C:/Users/zhang/Desktop/manage_ip/managed_ip_project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4636 C:\Users\zhang\Desktop\manage_ip\managed_ip_project\managed_ip_project.xpr
-# Log file: C:/Users/zhang/Desktop/manage_ip/managed_ip_project/vivado.log
-# Journal file: C:/Users/zhang/Desktop/manage_ip/managed_ip_project\vivado.jou
+# Start of session at: Sat Dec 15 14:07:10 2018
+# Process ID: 18772
+# Current directory: C:/Users/zhang/manage_ip/managed_ip_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1692 C:\Users\zhang\manage_ip\managed_ip_project\managed_ip_project.xpr
+# Log file: C:/Users/zhang/manage_ip/managed_ip_project/vivado.log
+# Journal file: C:/Users/zhang/manage_ip/managed_ip_project\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/zhang/Desktop/manage_ip/managed_ip_project/managed_ip_project.xpr
-set_property -dict [list CONFIG.C_PROBE7_WIDTH {32}] [get_ips ila_8_16384_1120]
-generate_target all [get_files  C:/Users/zhang/Desktop/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci]
+open_project C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.xpr
+upgrade_ip -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_pn_100_25] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips clk_pn_100_25] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci]
+catch { config_ip_cache -export [get_ips -all clk_pn_100_25] }
+export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci]
+export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  flag_insert0_ram] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips flag_insert0_ram] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/zhang/manage_ip/flag_insert0_ram/flag_insert0_ram.xci]
+catch { config_ip_cache -export [get_ips -all flag_insert0_ram] }
+export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/flag_insert0_ram/flag_insert0_ram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/flag_insert0_ram/flag_insert0_ram.xci]
+export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/flag_insert0_ram/flag_insert0_ram.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  hdlc_rx_ram] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips hdlc_rx_ram] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/zhang/manage_ip/hdlc_rx_ram/hdlc_rx_ram.xci]
+catch { config_ip_cache -export [get_ips -all hdlc_rx_ram] }
+export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/hdlc_rx_ram/hdlc_rx_ram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/hdlc_rx_ram/hdlc_rx_ram.xci]
+export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/hdlc_rx_ram/hdlc_rx_ram.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  hdlc_tx_ram] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips hdlc_tx_ram] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/zhang/manage_ip/hdlc_tx_ram/hdlc_tx_ram.xci]
+catch { config_ip_cache -export [get_ips -all hdlc_tx_ram] }
+export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/hdlc_tx_ram/hdlc_tx_ram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/hdlc_tx_ram/hdlc_tx_ram.xci]
+export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/hdlc_tx_ram/hdlc_tx_ram.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:ila:6.2 [get_ips  ila_8_16384_1120] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips ila_8_16384_1120] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci]
 catch { config_ip_cache -export [get_ips -all ila_8_16384_1120] }
-export_ip_user_files -of_objects [get_files C:/Users/zhang/Desktop/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci] -no_script -sync -force -quiet
-reset_run ila_8_16384_1120_synth_1
-launch_runs -jobs 6 ila_8_16384_1120_synth_1
-export_simulation -of_objects [get_files C:/Users/zhang/Desktop/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci] -directory C:/Users/zhang/Desktop/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/Desktop/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/Desktop/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/Desktop/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/Desktop/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/Desktop/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/Desktop/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci]
+export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  insert0_ram] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips insert0_ram] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/zhang/manage_ip/insert0_ram/insert0_ram.xci]
+catch { config_ip_cache -export [get_ips -all insert0_ram] }
+export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/insert0_ram/insert0_ram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/insert0_ram/insert0_ram.xci]
+export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/insert0_ram/insert0_ram.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet

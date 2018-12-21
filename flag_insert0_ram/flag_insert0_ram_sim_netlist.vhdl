@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Wed Nov 21 10:29:47 2018
+-- Date        : Fri Dec 14 16:49:51 2018
 -- Host        : DESKTOP-9QJ75LG running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/zhang/Desktop/manage_ip/flag_insert0_ram/flag_insert0_ram_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top flag_insert0_ram -prefix
+--               flag_insert0_ram_ flag_insert0_ram_sim_netlist.vhdl
 -- Design      : flag_insert0_ram
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,14 +21,11 @@ entity flag_insert0_ram_blk_mem_gen_prim_wrapper is
     clkb : in STD_LOGIC;
     ena : in STD_LOGIC;
     enb : in STD_LOGIC;
-    rstb : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 12 downto 0 );
     addrb : in STD_LOGIC_VECTOR ( 12 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 0 to 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of flag_insert0_ram_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end flag_insert0_ram_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of flag_insert0_ram_blk_mem_gen_prim_wrapper is
@@ -167,7 +164,7 @@ begin
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
-      RSTREGB => rstb,
+      RSTREGB => '0',
       WEA(1) => wea(0),
       WEA(0) => wea(0),
       WEBWE(3 downto 0) => B"0000"
@@ -184,14 +181,11 @@ entity flag_insert0_ram_blk_mem_gen_prim_width is
     clkb : in STD_LOGIC;
     ena : in STD_LOGIC;
     enb : in STD_LOGIC;
-    rstb : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 12 downto 0 );
     addrb : in STD_LOGIC_VECTOR ( 12 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 0 to 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of flag_insert0_ram_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end flag_insert0_ram_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of flag_insert0_ram_blk_mem_gen_prim_width is
@@ -206,7 +200,6 @@ begin
       doutb(0) => doutb(0),
       ena => ena,
       enb => enb,
-      rstb => rstb,
       wea(0) => wea(0)
     );
 end STRUCTURE;
@@ -221,14 +214,11 @@ entity flag_insert0_ram_blk_mem_gen_generic_cstr is
     clkb : in STD_LOGIC;
     ena : in STD_LOGIC;
     enb : in STD_LOGIC;
-    rstb : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 12 downto 0 );
     addrb : in STD_LOGIC_VECTOR ( 12 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 0 to 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of flag_insert0_ram_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end flag_insert0_ram_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of flag_insert0_ram_blk_mem_gen_generic_cstr is
@@ -243,7 +233,6 @@ begin
       doutb(0) => doutb(0),
       ena => ena,
       enb => enb,
-      rstb => rstb,
       wea(0) => wea(0)
     );
 end STRUCTURE;
@@ -258,14 +247,11 @@ entity flag_insert0_ram_blk_mem_gen_top is
     clkb : in STD_LOGIC;
     ena : in STD_LOGIC;
     enb : in STD_LOGIC;
-    rstb : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 12 downto 0 );
     addrb : in STD_LOGIC_VECTOR ( 12 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 0 to 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of flag_insert0_ram_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end flag_insert0_ram_blk_mem_gen_top;
 
 architecture STRUCTURE of flag_insert0_ram_blk_mem_gen_top is
@@ -280,7 +266,6 @@ begin
       doutb(0) => doutb(0),
       ena => ena,
       enb => enb,
-      rstb => rstb,
       wea(0) => wea(0)
     );
 end STRUCTURE;
@@ -295,14 +280,11 @@ entity flag_insert0_ram_blk_mem_gen_v8_4_1_synth is
     clkb : in STD_LOGIC;
     ena : in STD_LOGIC;
     enb : in STD_LOGIC;
-    rstb : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 12 downto 0 );
     addrb : in STD_LOGIC_VECTOR ( 12 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 0 to 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of flag_insert0_ram_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end flag_insert0_ram_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of flag_insert0_ram_blk_mem_gen_v8_4_1_synth is
@@ -317,7 +299,6 @@ begin
       doutb(0) => doutb(0),
       ena => ena,
       enb => enb,
-      rstb => rstb,
       wea(0) => wea(0)
     );
 end STRUCTURE;
@@ -464,7 +445,7 @@ entity flag_insert0_ram_blk_mem_gen_v8_4_1 is
   attribute C_HAS_RSTA : integer;
   attribute C_HAS_RSTA of flag_insert0_ram_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_RSTB : integer;
-  attribute C_HAS_RSTB of flag_insert0_ram_blk_mem_gen_v8_4_1 : entity is 1;
+  attribute C_HAS_RSTB of flag_insert0_ram_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_SOFTECC_INPUT_REGS_A : integer;
   attribute C_HAS_SOFTECC_INPUT_REGS_A of flag_insert0_ram_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_SOFTECC_OUTPUT_REGS_B : integer;
@@ -537,8 +518,6 @@ entity flag_insert0_ram_blk_mem_gen_v8_4_1 is
   attribute C_WRITE_WIDTH_B of flag_insert0_ram_blk_mem_gen_v8_4_1 : entity is 1;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of flag_insert0_ram_blk_mem_gen_v8_4_1 : entity is "virtex7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of flag_insert0_ram_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of flag_insert0_ram_blk_mem_gen_v8_4_1 : entity is "yes";
 end flag_insert0_ram_blk_mem_gen_v8_4_1;
@@ -612,7 +591,6 @@ inst_blk_mem_gen: entity work.flag_insert0_ram_blk_mem_gen_v8_4_1_synth
       doutb(0) => doutb(0),
       ena => ena,
       enb => enb,
-      rstb => rstb,
       wea(0) => wea(0)
     );
 end STRUCTURE;
@@ -628,7 +606,6 @@ entity flag_insert0_ram is
     addra : in STD_LOGIC_VECTOR ( 12 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 0 to 0 );
     clkb : in STD_LOGIC;
-    rstb : in STD_LOGIC;
     enb : in STD_LOGIC;
     addrb : in STD_LOGIC_VECTOR ( 12 downto 0 );
     doutb : out STD_LOGIC_VECTOR ( 0 to 0 )
@@ -737,7 +714,7 @@ architecture STRUCTURE of flag_insert0_ram is
   attribute C_HAS_RSTA : integer;
   attribute C_HAS_RSTA of U0 : label is 0;
   attribute C_HAS_RSTB : integer;
-  attribute C_HAS_RSTB of U0 : label is 1;
+  attribute C_HAS_RSTB of U0 : label is 0;
   attribute C_HAS_SOFTECC_INPUT_REGS_A : integer;
   attribute C_HAS_SOFTECC_INPUT_REGS_A of U0 : label is 0;
   attribute C_HAS_SOFTECC_OUTPUT_REGS_B : integer;
@@ -819,7 +796,6 @@ architecture STRUCTURE of flag_insert0_ram is
   attribute x_interface_parameter of clkb : signal is "XIL_INTERFACENAME BRAM_PORTB, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER";
   attribute x_interface_info of ena : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA EN";
   attribute x_interface_info of enb : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTB EN";
-  attribute x_interface_info of rstb : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTB RST";
   attribute x_interface_info of addra : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR";
   attribute x_interface_info of addrb : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR";
   attribute x_interface_info of dina : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA DIN";
@@ -848,7 +824,7 @@ U0: entity work.flag_insert0_ram_blk_mem_gen_v8_4_1
       regceb => '0',
       rsta => '0',
       rsta_busy => NLW_U0_rsta_busy_UNCONNECTED,
-      rstb => rstb,
+      rstb => '0',
       rstb_busy => NLW_U0_rstb_busy_UNCONNECTED,
       s_aclk => '0',
       s_aresetn => '0',

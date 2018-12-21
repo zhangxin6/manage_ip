@@ -60,7 +60,6 @@ module hdlc_rx_ram (
   addra,
   dina,
   clkb,
-  rstb,
   enb,
   addrb,
   doutb
@@ -79,8 +78,6 @@ input wire [8 : 0] addra;
 input wire [7 : 0] dina;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB CLK" *)
 input wire clkb;
-(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB RST" *)
-input wire rstb;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB EN" *)
 input wire enb;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR" *)
@@ -124,7 +121,7 @@ output wire [15 : 0] doutb;
     .C_WRITE_DEPTH_A(512),
     .C_READ_DEPTH_A(512),
     .C_ADDRA_WIDTH(9),
-    .C_HAS_RSTB(1),
+    .C_HAS_RSTB(0),
     .C_RST_PRIORITY_B("CE"),
     .C_RSTRAM_B(0),
     .C_INITB_VAL("0"),
@@ -173,7 +170,7 @@ output wire [15 : 0] doutb;
     .dina(dina),
     .douta(),
     .clkb(clkb),
-    .rstb(rstb),
+    .rstb(1'D0),
     .enb(enb),
     .regceb(1'D0),
     .web(1'B0),

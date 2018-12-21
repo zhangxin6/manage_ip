@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Dec 15 13:41:03 2018
+# Process ID: 6872
+# Current directory: C:/Users/zhang/manage_ip/managed_ip_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8676 C:\Users\zhang\manage_ip\managed_ip_project\managed_ip_project.xpr
+# Log file: C:/Users/zhang/manage_ip/managed_ip_project/vivado.log
+# Journal file: C:/Users/zhang/manage_ip/managed_ip_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 874.199 ; gain = 114.676
+generate_target all [get_files  C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_pn_100_25'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_pn_100_25'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_pn_100_25'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_pn_100_25'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_pn_100_25'...
+catch { config_ip_cache -export [get_ips -all clk_pn_100_25] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP clk_pn_100_25, cache-ID = 10706714a1b27f49; cache size = 30.266 MB.
+export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci'
+export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/actexit
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 15 13:47:36 2018...
+xiting Vivado at Sat Dec 15 13:47:29 2018...

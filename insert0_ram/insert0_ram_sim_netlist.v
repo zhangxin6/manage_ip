@@ -1,9 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Mon Nov 19 14:41:30 2018
+// Date        : Fri Dec 14 16:51:14 2018
 // Host        : DESKTOP-9QJ75LG running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim c:/Users/zhang/Desktop/manage_ip/insert0_ram/insert0_ram_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top insert0_ram -prefix
+//               insert0_ram_ insert0_ram_sim_netlist.v
 // Design      : insert0_ram
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,7 +21,6 @@ module insert0_ram
     addra,
     dina,
     clkb,
-    rstb,
     enb,
     addrb,
     doutb);
@@ -30,7 +30,6 @@ module insert0_ram
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *) input [8:0]addra;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA DIN" *) input [7:0]dina;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME BRAM_PORTB, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER" *) input clkb;
-  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB RST" *) input rstb;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB EN" *) input enb;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR" *) input [8:0]addrb;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB DOUT" *) output [7:0]doutb;
@@ -43,7 +42,6 @@ module insert0_ram
   wire [7:0]doutb;
   wire ena;
   wire enb;
-  wire rstb;
   wire [0:0]wea;
   wire NLW_U0_dbiterr_UNCONNECTED;
   wire NLW_U0_rsta_busy_UNCONNECTED;
@@ -102,7 +100,7 @@ module insert0_ram
   (* C_HAS_REGCEA = "0" *) 
   (* C_HAS_REGCEB = "0" *) 
   (* C_HAS_RSTA = "0" *) 
-  (* C_HAS_RSTB = "1" *) 
+  (* C_HAS_RSTB = "0" *) 
   (* C_HAS_SOFTECC_INPUT_REGS_A = "0" *) 
   (* C_HAS_SOFTECC_OUTPUT_REGS_B = "0" *) 
   (* C_INITA_VAL = "0" *) 
@@ -161,7 +159,7 @@ module insert0_ram
         .regceb(1'b0),
         .rsta(1'b0),
         .rsta_busy(NLW_U0_rsta_busy_UNCONNECTED),
-        .rstb(rstb),
+        .rstb(1'b0),
         .rstb_busy(NLW_U0_rstb_busy_UNCONNECTED),
         .s_aclk(1'b0),
         .s_aresetn(1'b0),
@@ -206,14 +204,12 @@ module insert0_ram
         .web(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module insert0_ram_blk_mem_gen_generic_cstr
    (doutb,
     clkb,
     clka,
     enb,
     ena,
-    rstb,
     addrb,
     addra,
     dina,
@@ -223,7 +219,6 @@ module insert0_ram_blk_mem_gen_generic_cstr
   input clka;
   input enb;
   input ena;
-  input rstb;
   input [8:0]addrb;
   input [8:0]addra;
   input [7:0]dina;
@@ -237,7 +232,6 @@ module insert0_ram_blk_mem_gen_generic_cstr
   wire [7:0]doutb;
   wire ena;
   wire enb;
-  wire rstb;
   wire [0:0]wea;
 
   insert0_ram_blk_mem_gen_prim_width \ramloop[0].ram.r 
@@ -249,18 +243,15 @@ module insert0_ram_blk_mem_gen_generic_cstr
         .doutb(doutb),
         .ena(ena),
         .enb(enb),
-        .rstb(rstb),
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module insert0_ram_blk_mem_gen_prim_width
    (doutb,
     clkb,
     clka,
     enb,
     ena,
-    rstb,
     addrb,
     addra,
     dina,
@@ -270,7 +261,6 @@ module insert0_ram_blk_mem_gen_prim_width
   input clka;
   input enb;
   input ena;
-  input rstb;
   input [8:0]addrb;
   input [8:0]addra;
   input [7:0]dina;
@@ -284,7 +274,6 @@ module insert0_ram_blk_mem_gen_prim_width
   wire [7:0]doutb;
   wire ena;
   wire enb;
-  wire rstb;
   wire [0:0]wea;
 
   insert0_ram_blk_mem_gen_prim_wrapper \prim_noinit.ram 
@@ -296,18 +285,15 @@ module insert0_ram_blk_mem_gen_prim_width
         .doutb(doutb),
         .ena(ena),
         .enb(enb),
-        .rstb(rstb),
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module insert0_ram_blk_mem_gen_prim_wrapper
    (doutb,
     clkb,
     clka,
     enb,
     ena,
-    rstb,
     addrb,
     addra,
     dina,
@@ -317,7 +303,6 @@ module insert0_ram_blk_mem_gen_prim_wrapper
   input clka;
   input enb;
   input ena;
-  input rstb;
   input [8:0]addrb;
   input [8:0]addra;
   input [7:0]dina;
@@ -359,7 +344,6 @@ module insert0_ram_blk_mem_gen_prim_wrapper
   wire [7:0]doutb;
   wire ena;
   wire enb;
-  wire rstb;
   wire [0:0]wea;
 
   (* box_type = "PRIMITIVE" *) 
@@ -482,20 +466,18 @@ module insert0_ram_blk_mem_gen_prim_wrapper
         .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
-        .RSTREGARSTREG(rstb),
+        .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
         .WEA({1'b0,1'b0}),
         .WEBWE({wea,wea,wea,wea}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module insert0_ram_blk_mem_gen_top
    (doutb,
     clkb,
     clka,
     enb,
     ena,
-    rstb,
     addrb,
     addra,
     dina,
@@ -505,7 +487,6 @@ module insert0_ram_blk_mem_gen_top
   input clka;
   input enb;
   input ena;
-  input rstb;
   input [8:0]addrb;
   input [8:0]addra;
   input [7:0]dina;
@@ -519,7 +500,6 @@ module insert0_ram_blk_mem_gen_top
   wire [7:0]doutb;
   wire ena;
   wire enb;
-  wire rstb;
   wire [0:0]wea;
 
   insert0_ram_blk_mem_gen_generic_cstr \valid.cstr 
@@ -531,7 +511,6 @@ module insert0_ram_blk_mem_gen_top
         .doutb(doutb),
         .ena(ena),
         .enb(enb),
-        .rstb(rstb),
         .wea(wea));
 endmodule
 
@@ -547,7 +526,7 @@ endmodule
 (* C_HAS_ENB = "1" *) (* C_HAS_INJECTERR = "0" *) (* C_HAS_MEM_OUTPUT_REGS_A = "0" *) 
 (* C_HAS_MEM_OUTPUT_REGS_B = "1" *) (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) 
 (* C_HAS_REGCEA = "0" *) (* C_HAS_REGCEB = "0" *) (* C_HAS_RSTA = "0" *) 
-(* C_HAS_RSTB = "1" *) (* C_HAS_SOFTECC_INPUT_REGS_A = "0" *) (* C_HAS_SOFTECC_OUTPUT_REGS_B = "0" *) 
+(* C_HAS_RSTB = "0" *) (* C_HAS_SOFTECC_INPUT_REGS_A = "0" *) (* C_HAS_SOFTECC_OUTPUT_REGS_B = "0" *) 
 (* C_INITA_VAL = "0" *) (* C_INITB_VAL = "0" *) (* C_INIT_FILE = "insert0_ram.mem" *) 
 (* C_INIT_FILE_NAME = "no_coe_file_loaded" *) (* C_INTERFACE_TYPE = "0" *) (* C_LOAD_INIT_FILE = "0" *) 
 (* C_MEM_TYPE = "1" *) (* C_MUX_PIPELINE_STAGES = "0" *) (* C_PRIM_TYPE = "1" *) 
@@ -559,7 +538,7 @@ endmodule
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) 
 (* C_WRITE_DEPTH_A = "512" *) (* C_WRITE_DEPTH_B = "512" *) (* C_WRITE_MODE_A = "NO_CHANGE" *) 
 (* C_WRITE_MODE_B = "WRITE_FIRST" *) (* C_WRITE_WIDTH_A = "8" *) (* C_WRITE_WIDTH_B = "8" *) 
-(* C_XDEVICEFAMILY = "virtex7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_4_1" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* C_XDEVICEFAMILY = "virtex7" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module insert0_ram_blk_mem_gen_v8_4_1
    (clka,
     rsta,
@@ -697,7 +676,6 @@ module insert0_ram_blk_mem_gen_v8_4_1
   wire [7:0]doutb;
   wire ena;
   wire enb;
-  wire rstb;
   wire [0:0]wea;
 
   assign dbiterr = \<const0> ;
@@ -769,18 +747,15 @@ module insert0_ram_blk_mem_gen_v8_4_1
         .doutb(doutb),
         .ena(ena),
         .enb(enb),
-        .rstb(rstb),
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_1_synth" *) 
 module insert0_ram_blk_mem_gen_v8_4_1_synth
    (doutb,
     clkb,
     clka,
     enb,
     ena,
-    rstb,
     addrb,
     addra,
     dina,
@@ -790,7 +765,6 @@ module insert0_ram_blk_mem_gen_v8_4_1_synth
   input clka;
   input enb;
   input ena;
-  input rstb;
   input [8:0]addrb;
   input [8:0]addra;
   input [7:0]dina;
@@ -804,7 +778,6 @@ module insert0_ram_blk_mem_gen_v8_4_1_synth
   wire [7:0]doutb;
   wire ena;
   wire enb;
-  wire rstb;
   wire [0:0]wea;
 
   insert0_ram_blk_mem_gen_top \gnbram.gnativebmg.native_blk_mem_gen 
@@ -816,7 +789,6 @@ module insert0_ram_blk_mem_gen_v8_4_1_synth
         .doutb(doutb),
         .ena(ena),
         .enb(enb),
-        .rstb(rstb),
         .wea(wea));
 endmodule
 `ifndef GLBL

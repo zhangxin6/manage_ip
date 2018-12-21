@@ -1,0 +1,121 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Dec 15 14:10:16 2018
+| Host         : DESKTOP-9QJ75LG running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1930-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'insert0_ram'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of insert0_ram (xilinx.com:ip:blk_mem_gen:8.4 (Rev. 1)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Dec 15 14:09:54 2018
+| Host         : DESKTOP-9QJ75LG running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1930-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ila_8_16384_1120'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of ila_8_16384_1120 (xilinx.com:ip:ila:6.2 (Rev. 7)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Dec 15 14:09:16 2018
+| Host         : DESKTOP-9QJ75LG running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1930-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'hdlc_tx_ram'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of hdlc_tx_ram (xilinx.com:ip:blk_mem_gen:8.4 (Rev. 1)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Dec 15 14:09:01 2018
+| Host         : DESKTOP-9QJ75LG running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1930-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'hdlc_rx_ram'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of hdlc_rx_ram (xilinx.com:ip:blk_mem_gen:8.4 (Rev. 1)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Dec 15 14:08:43 2018
+| Host         : DESKTOP-9QJ75LG running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1930-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'flag_insert0_ram'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of flag_insert0_ram (xilinx.com:ip:blk_mem_gen:8.4 (Rev. 1)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Dec 15 14:08:20 2018
+| Host         : DESKTOP-9QJ75LG running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1930-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'clk_pn_100_25'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of clk_pn_100_25 (xilinx.com:ip:clk_wiz:6.0 (Rev. 1)) to Vivado generation flows.
+

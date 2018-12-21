@@ -1,0 +1,318 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Dec 15 13:53:31 2018
+# Process ID: 15608
+# Current directory: C:/Users/zhang/manage_ip/managed_ip_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8088 C:\Users\zhang\manage_ip\managed_ip_project\managed_ip_project.xpr
+# Log file: C:/Users/zhang/manage_ip/managed_ip_project/vivado.log
+# Journal file: C:/Users/zhang/manage_ip/managed_ip_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 862.023 ; gain = 109.199
+generate_target all [get_files  C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_pn_100_25'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_pn_100_25'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_pn_100_25'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_pn_100_25'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_pn_100_25'...
+catch { config_ip_cache -export [get_ips -all clk_pn_100_25] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP clk_pn_100_25, cache-ID = 10706714a1b27f49; cache size = 30.266 MB.
+export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci'
+export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+help export_ip_user_files
+export_ip_user_files
+
+Description: 
+(User-written application)
+Generate and export IP/IPI user files from a project. This can be scoped to work on one or more IPs.
+Argument Usage:
+[-of_objects <arg>]: IP,IPI or a fileset object
+[-ip_user_files_dir <arg>]: Directory path to simulation base directory (for static, dynamic, wrapper, netlist, script and MEM files)
+[-ipstatic_source_dir <arg>]: Directory path to the IP static files
+[-lib_map_path <arg> = Empty]: Compiled simulation library directory path
+[-no_script]: Do not export simulation scripts
+[-sync]: Delete IP/IPI dynamic and simulation script files
+[-reset]: Delete all IP/IPI static, dynamic and simulation script files
+[-force]: Overwrite files
+
+
+Syntax: 
+export_ip_user_files  [-of_objects <arg>] [-ip_user_files_dir <arg>]
+                      [-ipstatic_source_dir <arg>] [-lib_map_path <arg>]
+                      [-no_script] [-sync] [-reset] [-force] [-quiet]
+                      [-verbose]
+
+Returns: 
+list of files that were exported
+
+
+Usage: 
+  Name                    Description
+  -----------------------------------
+  [-of_objects]           IP,IPI or a fileset object
+                          Default: None
+  [-ip_user_files_dir]    Directory path to simulation base directory (for 
+                          static, dynamic, wrapper, netlist, script and MEM 
+                          files)
+                          Default: None
+  [-ipstatic_source_dir]  Directory path to the IP static files
+                          Default: None
+  [-lib_map_path]         Compiled simulation library directory path
+                          Default: Empty
+  [-no_script]            Do not export simulation scripts
+                          Default: 1
+  [-sync]                 Delete IP/IPI dynamic and simulation script files
+  [-reset]                Delete all IP/IPI static, dynamic and simulation 
+                          script files
+  [-force]                Overwrite files
+  [-quiet]                Ignore command errors
+  [-verbose]              Suspend message limits during command execution
+
+Categories: 
+simulation, xilinxtclstore, user-written
+
+Description:
+
+  Export IP user files repository with static, dynamic, netlist, verilog/vhdl stubs and memory initializaton files.
+
+Arguments:
+
+  -of_objects - (Optional) Target object for which the IP static and dynamic files needs to be exported.
+
+  -ip_user_files_dir - (Optional) Directory path to IP user files base directory. By default, if this switch is not specified then
+                       this command will use the path specified with the "IP.USER_FILES_DIR" project property value.
+
+  -ipstatic_source_dir - (Optional)  Directory path to the static IP files. By default, if this switch is not specified then this
+                       command will use the path specified with the "SIM.IPSTATIC_SOURCE_DIR" project property value.
+
+  -lib_map_path - (Optional) Directory path to the compiled simulation library.
+
+  -no_script - (Optional) Do not export simulation scripts generated by export_simulation Tcl command. By default, this command will
+               call export_simulation to generate simulation scripts.
+
+  -sync - (Optional) Delete specific IP/IPI instance static, dynamic and generated scripts from the ip_user_files dir.
+
+  -reset - (Optional) Delete all IP/IPI static, dynamic and simulation script files from the ip_user_files dir.
+
+  -force - (Optional) Overwrite existing source files in the ip_user_files directory
+
+  NOTE:- If the -ip_user_files_dir switch is specified, by default the IP static files will be exported under the sub-directory
+         with the name "ipstatic". If this switch is specified in conjunction with -ipstatic_source_dir, then the IP static
+         files will be exported in the path specified with the -ipstatic_source_dir switch. 
+
+  -quiet - (Optional) Execute the command quietly, ignoring any command line errors and returning no
+  messages. The command also returns TCL_OK regardless of any errors encountered during execution.
+
+  -verbose - (Optional) Temporarily override any message limits and return all messages from this command.
+
+  Note: Message limits can be defined with the set_msg_config command.
+
+Examples:
+
+  The following command will export, 'char_fifo' IP dynamic files to '<project>/<project>.ip_user_files/ip/char_fifo' directory,
+  'char_fifo' IP static files to '<project>/<project>.ip_user_files/ipstatic' directory, and simulation scripts files to
+  '<project>/<project>.ip_user_files/sim_scripts/char_fifo/<simulator>' directory:-
+
+  % export_ip_user_files -of_objects [get_ips char_fifo]
+
+  The following command will export 'char_fifo' static files in '/my_project/user_files/static' and dynamic files
+  in '/my_project/user_files/ip' directory:-
+
+  % export_ip_user_files -of_objects [get_ips char_fifo] -ip_user_files_dir /my_project/user_files -ipstatic_source_dir /my_project/user_files/static
+
+  The following command will export 'char_fifo' simulation script files using compiled library from '/my_project/compiled_libs/lib':-
+
+  % export_ip_user_files -of_objects [get_ips char_fifo] -lib_map_path /my_project/compiled_libs/lib
+
+  The following command will export files but will not generate simulation scripts for 'char_fifo':-
+
+  % export_ip_user_files -of_objects [get_ips char_fifo] -no_script
+
+  The following command will delete static, dynamic and simulation script files for the 'char_fifo' instance:-
+
+  % export_ip_user_files -of_objects [get_ips char_fifo] -sync
+
+  The following command will delete all static, dynamic and simulation script files:-
+
+  % export_ip_user_files -of_objects [get_ips char_fifo] -reset
+
+  The following command will overwrite all static, dynamic and simulation script files:-
+
+  % export_ip_user_files -of_objects [get_ips char_fifo] -force
+
+See Also:
+
+   *  get_files
+   *  get_ips
+help catch
+catch(n)              Tcl Built-In Commands              catch(n)
+
+
+
+_________________________________________________________________
+
+NAME
+       catch - Evaluate script and trap exceptional returns
+
+SYNOPSIS
+       catch script ?resultVarName? ?optionsVarName?
+_________________________________________________________________
+
+
+DESCRIPTION
+       The  catch  command  may  be  used  to prevent errors from
+       aborting command interpretation.  The catch command  calls
+       the  Tcl  interpreter  recursively  to execute script, and
+       always returns without raising an error, regardless of any
+       errors that might occur while executing script.
+
+       If  script  raises  an error, catch will return a non-zero
+       integer value corresponding to the exceptional return code
+       returned  by evaluation of script.  Tcl defines the normal
+       return code from script evaluation  to  be  zero  (0),  or
+       TCL_OK.  Tcl also defines four exceptional return codes: 1
+       (TCL_ERROR),  2  (TCL_RETURN),  3   (TCL_BREAK),   and   4
+       (TCL_CONTINUE).   Errors during evaluation of a script are
+       indicated by a return code of TCL_ERROR.  The other excep-
+       tional return codes are returned by the return, break, and
+       continue commands and in other special situations as docu-
+       mented.   Tcl packages can define new commands that return
+       other integer values as return codes as well, and  scripts
+       that  make  use  of the return -code command can also have
+       return codes other than the five defined by Tcl.
+
+       If the resultVarName argument is given, then the  variable
+       it  names  is  set to the result of the script evaluation.
+       When the return code from the script is 1 (TCL_ERROR), the
+       value  stored  in resultVarName is an error message.  When
+       the return code from the script is 0 (TCL_OK),  the  value
+       stored in resultVarName is the value returned from script.
+
+       If the optionsVarName argument is given, then the variable |
+       it names is set to a dictionary of return options returned |
+       by evaluation of script.  Tcl specifies two  entries  that |
+       are  always  defined  in the dictionary: -code and -level. |
+       When the return code from  evaluation  of  script  is  not |
+       TCL_RETURN,  the  value of the -level entry will be 0, and |
+       the value of the -code entry  will  be  the  same  as  the |
+       return code.  Only when the return code is TCL_RETURN will |
+       the values of the -level and -code  entries  be  something |
+       else,  as  further  described in the documentation for the |
+       return command.                                            |
+
+       When  the  return  code  from  evaluation  of  script   is |
+       TCL_ERROR,  three  additional  entries  are defined in the |
+       dictionary of return  options  stored  in  optionsVarName: |
+       -errorinfo,  -errorcode, and -errorline.  The value of the |
+       -errorinfo entry is a  formatted  stack  trace  containing |
+       more information about the context in which the error hap- |
+       pened.  The formatted stack trace is meant to be read by a |
+       person.   The  value of the -errorcode entry is additional |
+       information about the error stored as a list.  The -error- |
+       code  value  is meant to be further processed by programs, |
+       and may not be particularly readable by people.  The value |
+       of  the  -errorline  entry  is an integer indicating which |
+       line  of  script  was  being  evaluated  when  the   error |
+       occurred.   The  values  of  the -errorinfo and -errorcode |
+       entries of the most recent error  are  also  available  as |
+       values of the global variables ::errorInfo and ::errorCode |
+       respectively.                                              |
+
+       Tcl packages may provide commands that set  other  entries |
+       in  the  dictionary of return options, and the return com- |
+       mand may be used by scripts to set return options in addi- |
+       tion to those defined above.
+
+EXAMPLES
+       The  catch command may be used in an if to branch based on
+       the success of a script.
+              if { [catch {open $someFile w} fid] } {
+                  puts stderr "Could not open $someFile for writing\n$fid"
+                  exit 1
+              }
+
+       There are more complex examples of catch usage in the doc-
+       umentation for the return command.
+
+
+SEE ALSO
+       break(n),   continue(n),   dict(n),  error(n),  return(n),
+       tclvars(n)
+
+
+KEYWORDS
+       catch, error
+
+
+
+Tcl                            8.5                       catch(n)
+INFO: [Device 21-403] Loading part xc7vx690tffg1930-2
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+generate_target all [get_files  C:/Users/zhang/manage_ip/flag_insert0_ram/flag_insert0_ram.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'flag_insert0_ram'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'flag_insert0_ram'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'flag_insert0_ram'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'flag_insert0_ram'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'flag_insert0_ram'...
+catch { config_ip_cache -export [get_ips -all flag_insert0_ram] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP flag_insert0_ram, cache-ID = 92be22c957bc6cda; cache size = 30.266 MB.
+export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/flag_insert0_ram/flag_insert0_ram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/flag_insert0_ram/flag_insert0_ram.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/zhang/manage_ip/flag_insert0_ram/flag_insert0_ram.xci'
+export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/flag_insert0_ram/flag_insert0_ram.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+generate_target all [get_files  C:/Users/zhang/manage_ip/hdlc_tx_ram/hdlc_tx_ram.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'hdlc_tx_ram'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'hdlc_tx_ram'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'hdlc_tx_ram'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'hdlc_tx_ram'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'hdlc_tx_ram'...
+catch { config_ip_cache -export [get_ips -all hdlc_tx_ram] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP hdlc_tx_ram, cache-ID = ff1cf958e9c014c7; cache size = 30.266 MB.
+export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/hdlc_tx_ram/hdlc_tx_ram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/hdlc_tx_ram/hdlc_tx_ram.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/zhang/manage_ip/hdlc_tx_ram/hdlc_tx_ram.xci'
+export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/hdlc_tx_ram/hdlc_tx_ram.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+generate_target all [get_files  C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_8_16384_1120'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_8_16384_1120'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_8_16384_1120'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_8_16384_1120'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_8_16384_1120'...
+catch { config_ip_cache -export [get_ips -all ila_8_16384_1120] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP ila_8_16384_1120, cache-ID = 7c89a23b3e11f64c; cache size = 30.266 MB.
+export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci'
+export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+generate_target all [get_files  C:/Users/zhang/manage_ip/insert0_ram/insert0_ram.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'insert0_ram'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'insert0_ram'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'insert0_ram'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'insert0_ram'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'insert0_ram'...
+catch { config_ip_cache -export [get_ips -all insert0_ram] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP insert0_ram, cache-ID = 59d755fed156d023; cache size = 30.266 MB.
+export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/insert0_ram/insert0_ram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/insert0_ram/insert0_ram.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/zhang/manage_ip/insert0_ram/insert0_ram.xci'
+export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/insert0_ram/insert0_ram.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 15 14:06:51 2018...

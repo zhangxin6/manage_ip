@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Wed Nov 21 10:29:47 2018
+// Date        : Fri Dec 14 16:49:51 2018
 // Host        : DESKTOP-9QJ75LG running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/zhang/Desktop/manage_ip/flag_insert0_ram/flag_insert0_ram_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top flag_insert0_ram -prefix
+//               flag_insert0_ram_ flag_insert0_ram_sim_netlist.v
 // Design      : flag_insert0_ram
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,7 +21,6 @@ module flag_insert0_ram
     addra,
     dina,
     clkb,
-    rstb,
     enb,
     addrb,
     doutb);
@@ -31,7 +30,6 @@ module flag_insert0_ram
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *) input [12:0]addra;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA DIN" *) input [0:0]dina;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME BRAM_PORTB, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER" *) input clkb;
-  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB RST" *) input rstb;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB EN" *) input enb;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR" *) input [12:0]addrb;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB DOUT" *) output [0:0]doutb;
@@ -44,7 +42,6 @@ module flag_insert0_ram
   wire [0:0]doutb;
   wire ena;
   wire enb;
-  wire rstb;
   wire [0:0]wea;
   wire NLW_U0_dbiterr_UNCONNECTED;
   wire NLW_U0_rsta_busy_UNCONNECTED;
@@ -103,7 +100,7 @@ module flag_insert0_ram
   (* C_HAS_REGCEA = "0" *) 
   (* C_HAS_REGCEB = "0" *) 
   (* C_HAS_RSTA = "0" *) 
-  (* C_HAS_RSTB = "1" *) 
+  (* C_HAS_RSTB = "0" *) 
   (* C_HAS_SOFTECC_INPUT_REGS_A = "0" *) 
   (* C_HAS_SOFTECC_OUTPUT_REGS_B = "0" *) 
   (* C_INITA_VAL = "0" *) 
@@ -162,7 +159,7 @@ module flag_insert0_ram
         .regceb(1'b0),
         .rsta(1'b0),
         .rsta_busy(NLW_U0_rsta_busy_UNCONNECTED),
-        .rstb(rstb),
+        .rstb(1'b0),
         .rstb_busy(NLW_U0_rstb_busy_UNCONNECTED),
         .s_aclk(1'b0),
         .s_aresetn(1'b0),
@@ -207,14 +204,12 @@ module flag_insert0_ram
         .web(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module flag_insert0_ram_blk_mem_gen_generic_cstr
    (doutb,
     clka,
     clkb,
     ena,
     enb,
-    rstb,
     addra,
     addrb,
     dina,
@@ -224,7 +219,6 @@ module flag_insert0_ram_blk_mem_gen_generic_cstr
   input clkb;
   input ena;
   input enb;
-  input rstb;
   input [12:0]addra;
   input [12:0]addrb;
   input [0:0]dina;
@@ -238,7 +232,6 @@ module flag_insert0_ram_blk_mem_gen_generic_cstr
   wire [0:0]doutb;
   wire ena;
   wire enb;
-  wire rstb;
   wire [0:0]wea;
 
   flag_insert0_ram_blk_mem_gen_prim_width \ramloop[0].ram.r 
@@ -250,18 +243,15 @@ module flag_insert0_ram_blk_mem_gen_generic_cstr
         .doutb(doutb),
         .ena(ena),
         .enb(enb),
-        .rstb(rstb),
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module flag_insert0_ram_blk_mem_gen_prim_width
    (doutb,
     clka,
     clkb,
     ena,
     enb,
-    rstb,
     addra,
     addrb,
     dina,
@@ -271,7 +261,6 @@ module flag_insert0_ram_blk_mem_gen_prim_width
   input clkb;
   input ena;
   input enb;
-  input rstb;
   input [12:0]addra;
   input [12:0]addrb;
   input [0:0]dina;
@@ -285,7 +274,6 @@ module flag_insert0_ram_blk_mem_gen_prim_width
   wire [0:0]doutb;
   wire ena;
   wire enb;
-  wire rstb;
   wire [0:0]wea;
 
   flag_insert0_ram_blk_mem_gen_prim_wrapper \prim_noinit.ram 
@@ -297,18 +285,15 @@ module flag_insert0_ram_blk_mem_gen_prim_width
         .doutb(doutb),
         .ena(ena),
         .enb(enb),
-        .rstb(rstb),
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module flag_insert0_ram_blk_mem_gen_prim_wrapper
    (doutb,
     clka,
     clkb,
     ena,
     enb,
-    rstb,
     addra,
     addrb,
     dina,
@@ -318,7 +303,6 @@ module flag_insert0_ram_blk_mem_gen_prim_wrapper
   input clkb;
   input ena;
   input enb;
-  input rstb;
   input [12:0]addra;
   input [12:0]addrb;
   input [0:0]dina;
@@ -333,7 +317,6 @@ module flag_insert0_ram_blk_mem_gen_prim_wrapper
   wire [0:0]doutb;
   wire ena;
   wire enb;
-  wire rstb;
   wire [0:0]wea;
   wire [15:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_DOADO_UNCONNECTED ;
   wire [15:2]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_DOBDO_UNCONNECTED ;
@@ -461,19 +444,17 @@ module flag_insert0_ram_blk_mem_gen_prim_wrapper
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
-        .RSTREGB(rstb),
+        .RSTREGB(1'b0),
         .WEA({wea,wea}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module flag_insert0_ram_blk_mem_gen_top
    (doutb,
     clka,
     clkb,
     ena,
     enb,
-    rstb,
     addra,
     addrb,
     dina,
@@ -483,7 +464,6 @@ module flag_insert0_ram_blk_mem_gen_top
   input clkb;
   input ena;
   input enb;
-  input rstb;
   input [12:0]addra;
   input [12:0]addrb;
   input [0:0]dina;
@@ -497,7 +477,6 @@ module flag_insert0_ram_blk_mem_gen_top
   wire [0:0]doutb;
   wire ena;
   wire enb;
-  wire rstb;
   wire [0:0]wea;
 
   flag_insert0_ram_blk_mem_gen_generic_cstr \valid.cstr 
@@ -509,7 +488,6 @@ module flag_insert0_ram_blk_mem_gen_top
         .doutb(doutb),
         .ena(ena),
         .enb(enb),
-        .rstb(rstb),
         .wea(wea));
 endmodule
 
@@ -525,7 +503,7 @@ endmodule
 (* C_HAS_ENB = "1" *) (* C_HAS_INJECTERR = "0" *) (* C_HAS_MEM_OUTPUT_REGS_A = "0" *) 
 (* C_HAS_MEM_OUTPUT_REGS_B = "1" *) (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) 
 (* C_HAS_REGCEA = "0" *) (* C_HAS_REGCEB = "0" *) (* C_HAS_RSTA = "0" *) 
-(* C_HAS_RSTB = "1" *) (* C_HAS_SOFTECC_INPUT_REGS_A = "0" *) (* C_HAS_SOFTECC_OUTPUT_REGS_B = "0" *) 
+(* C_HAS_RSTB = "0" *) (* C_HAS_SOFTECC_INPUT_REGS_A = "0" *) (* C_HAS_SOFTECC_OUTPUT_REGS_B = "0" *) 
 (* C_INITA_VAL = "0" *) (* C_INITB_VAL = "0" *) (* C_INIT_FILE = "flag_insert0_ram.mem" *) 
 (* C_INIT_FILE_NAME = "no_coe_file_loaded" *) (* C_INTERFACE_TYPE = "0" *) (* C_LOAD_INIT_FILE = "0" *) 
 (* C_MEM_TYPE = "1" *) (* C_MUX_PIPELINE_STAGES = "0" *) (* C_PRIM_TYPE = "1" *) 
@@ -537,7 +515,7 @@ endmodule
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) 
 (* C_WRITE_DEPTH_A = "8192" *) (* C_WRITE_DEPTH_B = "8192" *) (* C_WRITE_MODE_A = "NO_CHANGE" *) 
 (* C_WRITE_MODE_B = "WRITE_FIRST" *) (* C_WRITE_WIDTH_A = "1" *) (* C_WRITE_WIDTH_B = "1" *) 
-(* C_XDEVICEFAMILY = "virtex7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_4_1" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* C_XDEVICEFAMILY = "virtex7" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module flag_insert0_ram_blk_mem_gen_v8_4_1
    (clka,
     rsta,
@@ -675,7 +653,6 @@ module flag_insert0_ram_blk_mem_gen_v8_4_1
   wire [0:0]doutb;
   wire ena;
   wire enb;
-  wire rstb;
   wire [0:0]wea;
 
   assign dbiterr = \<const0> ;
@@ -741,18 +718,15 @@ module flag_insert0_ram_blk_mem_gen_v8_4_1
         .doutb(doutb),
         .ena(ena),
         .enb(enb),
-        .rstb(rstb),
         .wea(wea));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_1_synth" *) 
 module flag_insert0_ram_blk_mem_gen_v8_4_1_synth
    (doutb,
     clka,
     clkb,
     ena,
     enb,
-    rstb,
     addra,
     addrb,
     dina,
@@ -762,7 +736,6 @@ module flag_insert0_ram_blk_mem_gen_v8_4_1_synth
   input clkb;
   input ena;
   input enb;
-  input rstb;
   input [12:0]addra;
   input [12:0]addrb;
   input [0:0]dina;
@@ -776,7 +749,6 @@ module flag_insert0_ram_blk_mem_gen_v8_4_1_synth
   wire [0:0]doutb;
   wire ena;
   wire enb;
-  wire rstb;
   wire [0:0]wea;
 
   flag_insert0_ram_blk_mem_gen_top \gnbram.gnativebmg.native_blk_mem_gen 
@@ -788,7 +760,6 @@ module flag_insert0_ram_blk_mem_gen_v8_4_1_synth
         .doutb(doutb),
         .ena(ena),
         .enb(enb),
-        .rstb(rstb),
         .wea(wea));
 endmodule
 `ifndef GLBL

@@ -61,7 +61,6 @@ insert0_ram your_instance_name (
   .addra(addra),  // input wire [8 : 0] addra
   .dina(dina),    // input wire [7 : 0] dina
   .clkb(clkb),    // input wire clkb
-  .rstb(rstb),    // input wire rstb
   .enb(enb),      // input wire enb
   .addrb(addrb),  // input wire [8 : 0] addrb
   .doutb(doutb)  // output wire [7 : 0] doutb

@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Tue Nov 20 16:01:44 2018
+// Date        : Tue Nov 20 16:01:42 2018
 // Host        : DESKTOP-9QJ75LG running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/zhang/Desktop/manage_ip/clk_pn_100_25/clk_pn_100_25_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top clk_pn_100_25 -prefix
+//               clk_pn_100_25_ clk_pn_100_25_sim_netlist.v
 // Design      : clk_pn_100_25
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -43,7 +43,6 @@ module clk_pn_100_25
         .reset(reset));
 endmodule
 
-(* ORIG_REF_NAME = "clk_pn_100_25_clk_wiz" *) 
 module clk_pn_100_25_clk_pn_100_25_clk_wiz
    (clk_out1,
     clk_out2,

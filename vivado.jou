@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Nov 28 12:33:30 2018
+# Process ID: 9260
+# Current directory: C:/Users/zhang/manage_ip
+# Command line: vivado.exe -mode tcl
+# Log file: C:/Users/zhang/manage_ip/vivado.log
+# Journal file: C:/Users/zhang/manage_ip\vivado.jou
+#-----------------------------------------------------------
+#A Vivado script that demonstrates a very simple RTL-to-bitstream batch flow 
+# 
+#NOTE: typical usage would be "vivado -mode tcl -source ./Desktop/simple1.tcl"
+# 
+#STEP #0: define output directory area.
+set verilogdir C:/Users/zhang/iverilog_testbench
+set sourcedir C:/Users/zhang/fpga_hdlc/src
+set outputdir C:/Users/zhang/fpga_hdlc/output
+set ipdir C:/Users/zhang/manage_ip 
+file mkdir $outputdir
+#STEP# 1: setup design sources and constraints 
+read_verilog [glob $verilogdir/insert0.v]
+read_verilog [glob $verilogdir/hdlctra.v]
+read_verilog [glob $verilogdir/hdlcrev.v]
+read_verilog [glob $verilogdir/insert0.v]
+read_verilog [glob $verilogdir/flag_i0.v]
+read_verilog [glob $verilogdir/dsp_hdlc_ctrl.v]
+read_verilog [glob $verilogdir/cpld_top.v]
+read_verilog [glob $verilogdir/emif_intf.v]
+read_verilog [glob $verilogdir/gpio_intf.v]
+read_verilog [glob $verilogdir/gpio_intr_gen.v]
+read_verilog [glob $sourcedir/top.v]
+read_xdc $sourcedir/top.xdc 
+read_ip  $ipdir/clk_pn_100_25/clk_pn_100_25.xci
+read_ip  $ipdir/ila_8_16384_1120/ila_8_16384_1120.xci
+read_ip  $ipdir/flag_insert0_ram/flag_insert0_ram.xci
+read_ip  $ipdir/hdlc_tx_ram/hdlc_tx_ram.xci
+read_ip  $ipdir/insert0_ram/insert0_ram.xci
+read_ip  $ipdir/hdlc_rx_ram/hdlc_rx_ram.xci
+#STEP# 2: run synthesis, report utilization and timing estimates, write checkpoint  design 
+set_param general.maxThreads 8
+synth_design -top top -part xc7vx690tffg1930-2 -flatten rebuilt 

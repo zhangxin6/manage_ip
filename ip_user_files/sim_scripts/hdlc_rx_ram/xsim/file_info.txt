@@ -1,2 +1,3 @@
+blk_mem_gen_v8_4.v,verilog,blk_mem_gen_v8_4_1,../../../ipstatic/simulation/blk_mem_gen_v8_4.v,
 hdlc_rx_ram.v,verilog,xil_defaultlib,../../../../hdlc_rx_ram/sim/hdlc_rx_ram.v,
 glbl.v,Verilog,xil_defaultlib,glbl.v

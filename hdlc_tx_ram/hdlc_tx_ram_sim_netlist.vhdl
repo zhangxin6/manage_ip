@@ -1,9 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Mon Nov 19 16:15:47 2018
+-- Date        : Fri Dec 14 15:46:52 2018
 -- Host        : DESKTOP-9QJ75LG running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim c:/Users/zhang/Desktop/manage_ip/hdlc_tx_ram/hdlc_tx_ram_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top hdlc_tx_ram -prefix
+--               hdlc_tx_ram_ hdlc_tx_ram_sim_netlist.vhdl
 -- Design      : hdlc_tx_ram
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,14 +21,11 @@ entity hdlc_tx_ram_blk_mem_gen_prim_wrapper is
     clka : in STD_LOGIC;
     enb : in STD_LOGIC;
     ena : in STD_LOGIC;
-    rstb : in STD_LOGIC;
     addrb : in STD_LOGIC_VECTOR ( 8 downto 0 );
     addra : in STD_LOGIC_VECTOR ( 7 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 15 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdlc_tx_ram_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end hdlc_tx_ram_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of hdlc_tx_ram_blk_mem_gen_prim_wrapper is
@@ -187,7 +185,7 @@ begin
       REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
-      RSTREGARSTREG => rstb,
+      RSTREGARSTREG => '0',
       RSTREGB => '0',
       WEA(1 downto 0) => B"00",
       WEBWE(3) => wea(0),
@@ -207,14 +205,11 @@ entity hdlc_tx_ram_blk_mem_gen_prim_width is
     clka : in STD_LOGIC;
     enb : in STD_LOGIC;
     ena : in STD_LOGIC;
-    rstb : in STD_LOGIC;
     addrb : in STD_LOGIC_VECTOR ( 8 downto 0 );
     addra : in STD_LOGIC_VECTOR ( 7 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 15 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdlc_tx_ram_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end hdlc_tx_ram_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of hdlc_tx_ram_blk_mem_gen_prim_width is
@@ -229,7 +224,6 @@ begin
       doutb(7 downto 0) => doutb(7 downto 0),
       ena => ena,
       enb => enb,
-      rstb => rstb,
       wea(0) => wea(0)
     );
 end STRUCTURE;
@@ -244,14 +238,11 @@ entity hdlc_tx_ram_blk_mem_gen_generic_cstr is
     clka : in STD_LOGIC;
     enb : in STD_LOGIC;
     ena : in STD_LOGIC;
-    rstb : in STD_LOGIC;
     addrb : in STD_LOGIC_VECTOR ( 8 downto 0 );
     addra : in STD_LOGIC_VECTOR ( 7 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 15 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdlc_tx_ram_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end hdlc_tx_ram_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of hdlc_tx_ram_blk_mem_gen_generic_cstr is
@@ -266,7 +257,6 @@ begin
       doutb(7 downto 0) => doutb(7 downto 0),
       ena => ena,
       enb => enb,
-      rstb => rstb,
       wea(0) => wea(0)
     );
 end STRUCTURE;
@@ -281,14 +271,11 @@ entity hdlc_tx_ram_blk_mem_gen_top is
     clka : in STD_LOGIC;
     enb : in STD_LOGIC;
     ena : in STD_LOGIC;
-    rstb : in STD_LOGIC;
     addrb : in STD_LOGIC_VECTOR ( 8 downto 0 );
     addra : in STD_LOGIC_VECTOR ( 7 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 15 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdlc_tx_ram_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end hdlc_tx_ram_blk_mem_gen_top;
 
 architecture STRUCTURE of hdlc_tx_ram_blk_mem_gen_top is
@@ -303,7 +290,6 @@ begin
       doutb(7 downto 0) => doutb(7 downto 0),
       ena => ena,
       enb => enb,
-      rstb => rstb,
       wea(0) => wea(0)
     );
 end STRUCTURE;
@@ -318,14 +304,11 @@ entity hdlc_tx_ram_blk_mem_gen_v8_4_1_synth is
     clka : in STD_LOGIC;
     enb : in STD_LOGIC;
     ena : in STD_LOGIC;
-    rstb : in STD_LOGIC;
     addrb : in STD_LOGIC_VECTOR ( 8 downto 0 );
     addra : in STD_LOGIC_VECTOR ( 7 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 15 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdlc_tx_ram_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end hdlc_tx_ram_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of hdlc_tx_ram_blk_mem_gen_v8_4_1_synth is
@@ -340,7 +323,6 @@ begin
       doutb(7 downto 0) => doutb(7 downto 0),
       ena => ena,
       enb => enb,
-      rstb => rstb,
       wea(0) => wea(0)
     );
 end STRUCTURE;
@@ -487,7 +469,7 @@ entity hdlc_tx_ram_blk_mem_gen_v8_4_1 is
   attribute C_HAS_RSTA : integer;
   attribute C_HAS_RSTA of hdlc_tx_ram_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_RSTB : integer;
-  attribute C_HAS_RSTB of hdlc_tx_ram_blk_mem_gen_v8_4_1 : entity is 1;
+  attribute C_HAS_RSTB of hdlc_tx_ram_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_SOFTECC_INPUT_REGS_A : integer;
   attribute C_HAS_SOFTECC_INPUT_REGS_A of hdlc_tx_ram_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_SOFTECC_OUTPUT_REGS_B : integer;
@@ -560,8 +542,6 @@ entity hdlc_tx_ram_blk_mem_gen_v8_4_1 is
   attribute C_WRITE_WIDTH_B of hdlc_tx_ram_blk_mem_gen_v8_4_1 : entity is 8;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of hdlc_tx_ram_blk_mem_gen_v8_4_1 : entity is "virtex7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdlc_tx_ram_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of hdlc_tx_ram_blk_mem_gen_v8_4_1 : entity is "yes";
 end hdlc_tx_ram_blk_mem_gen_v8_4_1;
@@ -649,7 +629,6 @@ inst_blk_mem_gen: entity work.hdlc_tx_ram_blk_mem_gen_v8_4_1_synth
       doutb(7 downto 0) => doutb(7 downto 0),
       ena => ena,
       enb => enb,
-      rstb => rstb,
       wea(0) => wea(0)
     );
 end STRUCTURE;
@@ -665,7 +644,6 @@ entity hdlc_tx_ram is
     addra : in STD_LOGIC_VECTOR ( 7 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 15 downto 0 );
     clkb : in STD_LOGIC;
-    rstb : in STD_LOGIC;
     enb : in STD_LOGIC;
     addrb : in STD_LOGIC_VECTOR ( 8 downto 0 );
     doutb : out STD_LOGIC_VECTOR ( 7 downto 0 )
@@ -774,7 +752,7 @@ architecture STRUCTURE of hdlc_tx_ram is
   attribute C_HAS_RSTA : integer;
   attribute C_HAS_RSTA of U0 : label is 0;
   attribute C_HAS_RSTB : integer;
-  attribute C_HAS_RSTB of U0 : label is 1;
+  attribute C_HAS_RSTB of U0 : label is 0;
   attribute C_HAS_SOFTECC_INPUT_REGS_A : integer;
   attribute C_HAS_SOFTECC_INPUT_REGS_A of U0 : label is 0;
   attribute C_HAS_SOFTECC_OUTPUT_REGS_B : integer;
@@ -856,7 +834,6 @@ architecture STRUCTURE of hdlc_tx_ram is
   attribute x_interface_parameter of clkb : signal is "XIL_INTERFACENAME BRAM_PORTB, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER";
   attribute x_interface_info of ena : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA EN";
   attribute x_interface_info of enb : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTB EN";
-  attribute x_interface_info of rstb : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTB RST";
   attribute x_interface_info of addra : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR";
   attribute x_interface_info of addrb : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR";
   attribute x_interface_info of dina : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA DIN";
@@ -885,7 +862,7 @@ U0: entity work.hdlc_tx_ram_blk_mem_gen_v8_4_1
       regceb => '0',
       rsta => '0',
       rsta_busy => NLW_U0_rsta_busy_UNCONNECTED,
-      rstb => rstb,
+      rstb => '0',
       rstb_busy => NLW_U0_rstb_busy_UNCONNECTED,
       s_aclk => '0',
       s_aresetn => '0',
