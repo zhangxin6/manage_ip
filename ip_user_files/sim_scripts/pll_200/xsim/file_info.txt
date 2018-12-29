@@ -1,0 +1,3 @@
+pll_200_clk_wiz.v,verilog,xil_defaultlib,../../../../pll_200/pll_200_clk_wiz.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+pll_200.v,verilog,xil_defaultlib,../../../../pll_200/pll_200.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+glbl.v,Verilog,xil_defaultlib,glbl.v

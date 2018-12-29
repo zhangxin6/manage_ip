@@ -2,10 +2,10 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Dec 15 14:07:10 2018
-# Process ID: 18772
+# Start of session at: Thu Dec 27 17:30:14 2018
+# Process ID: 2184
 # Current directory: C:/Users/zhang/manage_ip/managed_ip_project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1692 C:\Users\zhang\manage_ip\managed_ip_project\managed_ip_project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13468 C:\Users\zhang\manage_ip\managed_ip_project\managed_ip_project.xpr
 # Log file: C:/Users/zhang/manage_ip/managed_ip_project/vivado.log
 # Journal file: C:/Users/zhang/manage_ip/managed_ip_project\vivado.jou
 #-----------------------------------------------------------
@@ -16,130 +16,24 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-WARNING: [IP_Flow 19-2162] IP 'clk_pn_100_25' is locked:
-* Current project part 'xc7vx690tffg1930-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'clk_pn_100_25' do not match.
-Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-WARNING: [IP_Flow 19-2162] IP 'flag_insert0_ram' is locked:
-* Current project part 'xc7vx690tffg1930-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'flag_insert0_ram' do not match.
-Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-WARNING: [IP_Flow 19-2162] IP 'hdlc_rx_ram' is locked:
-* Current project part 'xc7vx690tffg1930-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'hdlc_rx_ram' do not match.
-Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-WARNING: [IP_Flow 19-2162] IP 'hdlc_tx_ram' is locked:
-* Current project part 'xc7vx690tffg1930-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'hdlc_tx_ram' do not match.
-Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-WARNING: [IP_Flow 19-2162] IP 'ila_8_16384_1120' is locked:
-* Current project part 'xc7vx690tffg1930-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'ila_8_16384_1120' do not match.
-Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-WARNING: [IP_Flow 19-2162] IP 'insert0_ram' is locked:
-* Current project part 'xc7vx690tffg1930-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'insert0_ram' do not match.
-Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 869.934 ; gain = 113.711
-upgrade_ip -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_pn_100_25] -log ip_upgrade.log
-Upgrading 'clk_pn_100_25'
-INFO: [IP_Flow 19-3420] Updated clk_pn_100_25 to use current project options
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_pn_100_25'...
-INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/zhang/manage_ip/managed_ip_project/ip_upgrade.log'.
-upgrade_ip: Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1481.570 ; gain = 303.648
-export_ip_user_files -of_objects [get_ips clk_pn_100_25] -no_script -sync -force -quiet
-generate_target all [get_files  C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_pn_100_25'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_pn_100_25'...
-INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_pn_100_25'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_pn_100_25'...
-catch { config_ip_cache -export [get_ips -all clk_pn_100_25] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP clk_pn_100_25, cache-ID = 10706714a1b27f49; cache size = 30.266 MB.
-export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci]
-INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci'
-export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/clk_pn_100_25/clk_pn_100_25.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-upgrade_ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  flag_insert0_ram] -log ip_upgrade.log
-Upgrading 'flag_insert0_ram'
-INFO: [Device 21-403] Loading part xc7vx690tffg1930-2
-INFO: [IP_Flow 19-3420] Updated flag_insert0_ram to use current project options
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'flag_insert0_ram'...
-INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/zhang/manage_ip/managed_ip_project/ip_upgrade.log'.
-export_ip_user_files -of_objects [get_ips flag_insert0_ram] -no_script -sync -force -quiet
-generate_target all [get_files  C:/Users/zhang/manage_ip/flag_insert0_ram/flag_insert0_ram.xci]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'flag_insert0_ram'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'flag_insert0_ram'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'flag_insert0_ram'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'flag_insert0_ram'...
-catch { config_ip_cache -export [get_ips -all flag_insert0_ram] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP flag_insert0_ram, cache-ID = 92be22c957bc6cda; cache size = 30.266 MB.
-export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/flag_insert0_ram/flag_insert0_ram.xci] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/flag_insert0_ram/flag_insert0_ram.xci]
-INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/zhang/manage_ip/flag_insert0_ram/flag_insert0_ram.xci'
-export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/flag_insert0_ram/flag_insert0_ram.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-upgrade_ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  hdlc_rx_ram] -log ip_upgrade.log
-Upgrading 'hdlc_rx_ram'
-INFO: [IP_Flow 19-3420] Updated hdlc_rx_ram to use current project options
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'hdlc_rx_ram'...
-INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/zhang/manage_ip/managed_ip_project/ip_upgrade.log'.
-export_ip_user_files -of_objects [get_ips hdlc_rx_ram] -no_script -sync -force -quiet
-generate_target all [get_files  C:/Users/zhang/manage_ip/hdlc_rx_ram/hdlc_rx_ram.xci]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'hdlc_rx_ram'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'hdlc_rx_ram'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'hdlc_rx_ram'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'hdlc_rx_ram'...
-catch { config_ip_cache -export [get_ips -all hdlc_rx_ram] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP hdlc_rx_ram, cache-ID = 5506209910cddd66; cache size = 30.266 MB.
-export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/hdlc_rx_ram/hdlc_rx_ram.xci] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/hdlc_rx_ram/hdlc_rx_ram.xci]
-INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/zhang/manage_ip/hdlc_rx_ram/hdlc_rx_ram.xci'
-export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/hdlc_rx_ram/hdlc_rx_ram.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-upgrade_ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  hdlc_tx_ram] -log ip_upgrade.log
-Upgrading 'hdlc_tx_ram'
-INFO: [IP_Flow 19-3420] Updated hdlc_tx_ram to use current project options
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'hdlc_tx_ram'...
-INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/zhang/manage_ip/managed_ip_project/ip_upgrade.log'.
-export_ip_user_files -of_objects [get_ips hdlc_tx_ram] -no_script -sync -force -quiet
-generate_target all [get_files  C:/Users/zhang/manage_ip/hdlc_tx_ram/hdlc_tx_ram.xci]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'hdlc_tx_ram'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'hdlc_tx_ram'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'hdlc_tx_ram'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'hdlc_tx_ram'...
-catch { config_ip_cache -export [get_ips -all hdlc_tx_ram] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP hdlc_tx_ram, cache-ID = ff1cf958e9c014c7; cache size = 30.266 MB.
-export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/hdlc_tx_ram/hdlc_tx_ram.xci] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/hdlc_tx_ram/hdlc_tx_ram.xci]
-INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/zhang/manage_ip/hdlc_tx_ram/hdlc_tx_ram.xci'
-export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/hdlc_tx_ram/hdlc_tx_ram.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-upgrade_ip -vlnv xilinx.com:ip:ila:6.2 [get_ips  ila_8_16384_1120] -log ip_upgrade.log
-Upgrading 'ila_8_16384_1120'
-INFO: [IP_Flow 19-3420] Updated ila_8_16384_1120 to use current project options
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_8_16384_1120'...
-INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/zhang/manage_ip/managed_ip_project/ip_upgrade.log'.
-upgrade_ip: Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 1694.172 ; gain = 53.570
-export_ip_user_files -of_objects [get_ips ila_8_16384_1120] -no_script -sync -force -quiet
-generate_target all [get_files  C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_8_16384_1120'...
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120_ooc.xdc'
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_8_16384_1120'...
-INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_8_16384_1120'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_8_16384_1120'...
-catch { config_ip_cache -export [get_ips -all ila_8_16384_1120] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP ila_8_16384_1120, cache-ID = 7c89a23b3e11f64c; cache size = 30.266 MB.
-export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci]
-INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci'
-export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/ila_8_16384_1120/ila_8_16384_1120.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-upgrade_ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 [get_ips  insert0_ram] -log ip_upgrade.log
-Upgrading 'insert0_ram'
-INFO: [IP_Flow 19-3420] Updated insert0_ram to use current project options
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'insert0_ram'...
-INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/zhang/manage_ip/managed_ip_project/ip_upgrade.log'.
-export_ip_user_files -of_objects [get_ips insert0_ram] -no_script -sync -force -quiet
-generate_target all [get_files  C:/Users/zhang/manage_ip/insert0_ram/insert0_ram.xci]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'insert0_ram'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'insert0_ram'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'insert0_ram'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'insert0_ram'...
-catch { config_ip_cache -export [get_ips -all insert0_ram] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP insert0_ram, cache-ID = 59d755fed156d023; cache size = 30.266 MB.
-export_ip_user_files -of_objects [get_files C:/Users/zhang/manage_ip/insert0_ram/insert0_ram.xci] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/zhang/manage_ip/insert0_ram/insert0_ram.xci]
-INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/zhang/manage_ip/insert0_ram/insert0_ram.xci'
-export_simulation -of_objects [get_files C:/Users/zhang/manage_ip/insert0_ram/insert0_ram.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 810.398 ; gain = 127.395
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name pll_200 -dir c:/Users/zhang/manage_ip
+set_property -dict [list CONFIG.Component_Name {pll_200} CONFIG.PRIM_IN_FREQ {25.000} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {200.000} CONFIG.CLKIN1_JITTER_PS {400.0} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {40.000} CONFIG.MMCM_CLKIN1_PERIOD {40.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_CLKOUT0_DIVIDE_F {5.000} CONFIG.CLKOUT1_JITTER {206.578} CONFIG.CLKOUT1_PHASE_ERROR {237.727}] [get_ips pll_200]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'pll_200' to 'pll_200' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files c:/Users/zhang/manage_ip/pll_200/pll_200.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'pll_200'...
+generate_target all [get_files  c:/Users/zhang/manage_ip/pll_200/pll_200.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' taexit
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 27 17:39:48 2018...
+target for IP 'pll_200'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'pll_200'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'pll_200'...
+catch { config_ip_cache -export [get_ips -all pll_200] }
+export_ip_user_files -of_objects [get_files c:/Users/zhang/manage_ip/pll_200/pll_200.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/zhang/manage_ip/pll_200/pll_200.xci]
+launch_runs -jobs 6 pll_200_synth_1
+[Thu Dec 27 17:32:23 2018] Launched pll_200_synth_1...
+Run output will be captured here: C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.runs/pll_200_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/zhang/manage_ip/pll_200/pll_200.xci] -directory C:/Users/zhang/manage_ip/ip_user_files/sim_scripts -ip_user_files_dir C:/Users/zhang/manage_ip/ip_user_files -ipstatic_source_dir C:/Users/zhang/manage_ip/ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/modelsim} {questa=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/questa} {riviera=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/riviera} {activehdl=C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 exit
-INFO: [Common 17-206] Exiting Vivado at Sat Dec 15 14:11:19 2018...
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 27 17:34:09 2018...

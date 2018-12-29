@@ -2,19 +2,20 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Nov 28 09:15:45 2018
-# Process ID: 11876
+# Start of session at: Wed Dec 26 13:38:38 2018
+# Process ID: 17976
 # Current directory: C:/Users/zhang/manage_ip/managed_ip_project
-# Command line: vivado.exe managed_ip_project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14256 C:\Users\zhang\manage_ip\managed_ip_project\managed_ip_project.xpr
 # Log file: C:/Users/zhang/manage_ip/managed_ip_project/vivado.log
 # Journal file: C:/Users/zhang/manage_ip/managed_ip_project\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project managed_ip_project.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/zhang/Desktop/manage_ip/managed_ip_project' since last save.
+open_project C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 831.434 ; gain = 116.402
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 811.406 ; gain = 112.156
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 26 14:25:54 2018...

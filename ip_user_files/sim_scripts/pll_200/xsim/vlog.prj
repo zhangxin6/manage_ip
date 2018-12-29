@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "../../../ipstatic" \
+"../../../../pll_200/pll_200_clk_wiz.v" \
+"../../../../pll_200/pll_200.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

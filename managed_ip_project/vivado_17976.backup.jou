@@ -2,12 +2,12 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Nov 28 09:15:45 2018
-# Process ID: 11876
+# Start of session at: Wed Dec 26 13:38:38 2018
+# Process ID: 17976
 # Current directory: C:/Users/zhang/manage_ip/managed_ip_project
-# Command line: vivado.exe managed_ip_project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14256 C:\Users\zhang\manage_ip\managed_ip_project\managed_ip_project.xpr
 # Log file: C:/Users/zhang/manage_ip/managed_ip_project/vivado.log
 # Journal file: C:/Users/zhang/manage_ip/managed_ip_project\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project managed_ip_project.xpr
+open_project C:/Users/zhang/manage_ip/managed_ip_project/managed_ip_project.xpr
